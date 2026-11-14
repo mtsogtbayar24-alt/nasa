@@ -1,3 +1,11 @@
-import type {ReactNode} from 'react';
-export const metadata={title:'COSMIC SHIFT',description:'Explore multi-epoch infrared sky imagery'};
-export default function Layout({children}:{children:ReactNode}){return <html lang="en"><body style={{margin:0,background:'#071321',color:'#e7f0fa',fontFamily:'system-ui, sans-serif'}}>{children}</body></html>}
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'COSMIC SHIFT — Infrared Sky Motion Explorer',
+  description: 'A research prototype for astronomical time-domain image comparison. Synthetic demo, not official NASA data.',
+};
+
+export default function RootLayout({children}:{children:React.ReactNode}) {
+  return <html lang="en"><body>{children}</body></html>;
+}
